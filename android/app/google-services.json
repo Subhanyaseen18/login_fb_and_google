@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "991673773243",
+    "project_id": "authlogin-d7334",
+    "storage_bucket": "authlogin-d7334.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:991673773243:android:f697a99f03d0e4b5124d9e",
+        "android_client_info": {
+          "package_name": "com.testingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "991673773243-sic1bf211vehtopennjuhpcojd0h40pf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.testingapp",
+            "certificate_hash": "8a826b1f894ab2607f8bc8e9f83f322b277f2b48"
+          }
+        },
+        {
+          "client_id": "991673773243-akvoocjsopfpdbgcsidedgh0qob19m4r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCodk_qaF8SlZLR5ZcTVkdJYT8w48urHek"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "991673773243-akvoocjsopfpdbgcsidedgh0qob19m4r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
