@@ -1,33 +1,29 @@
-import React, { useEffect } from 'react';
-import { View, Button, Text } from 'react-native';
-import auth from '@react-native-firebase/auth';
 import { GoogleSignin } from '@react-native-google-signin/google-signin';
-
-export default function App() {
-  useEffect(() => {
-    GoogleSignin.configure({
-      webClientId:
-        '9991673773243-akvoocjsopfpdbgcsidedgh0qob19m4r.apps.googleusercontent.com',
-    });
-  }, []);
-
-  const signInWithGoogle = async () => {
-    try {
-      await GoogleSignin.hasPlayServices();
-      const userInfo = await GoogleSignin.signIn();
-      console.log('userInfo', userInfo);
-      // const googleCredential = auth.GoogleAuthProvider.credential(idToken);
-      // const user = await auth().signInWithCredential(googleCredential);
-      console.log('Logged in user: ', userInfo);
-    } catch (error) {
-      console.log('Google Sign-In Error:', error);
-    }
+import React from 'react';
+import { Button, Text, View } from 'react-native';
+import {
+  LoginManager,
+  GraphRequest,
+  GraphRequestManager,
+} from 'react-native-fbsdk-next';
+function App() {
+  const fbLogin = () => {
+    LoginManager.logOut();
+    return LoginManager.logInWithPermissions(['public_profile', 'email']).then(
+      result => {
+        console.log('----', result);
+        //       if(result.declinedPermissions && result.declinedPermissions.includes('email')){
+        //  resCallback({message :'Email is required'})
+        //       }
+      },
+    );
   };
 
   return (
-    <View>
-      <Text>Google Login</Text>
-      <Button title="Login with Google" onPress={signInWithGoogle} />
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Facebook Login React Native Example</Text>
+      <Button title={'Login with Facebook'} onPress={fbLogin} />
     </View>
   );
 }
+export default App;
