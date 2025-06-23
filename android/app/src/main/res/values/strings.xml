@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">TestingApp</string>
     <string name="facebook_app_id">563688479940021</string>
-<string name="fb_login_protocol_scheme">fb563688479940021</string>
+    <string name="facebook_client_token">742e342ab2cc4cfdcdc11ea42dd18633</string>
 </resources>
